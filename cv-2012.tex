@@ -5,70 +5,93 @@
 \usepackage[utf8]{inputenc}
 \usepackage[scale=0.8]{geometry}
 \AtBeginDocument{\recomputelengths}
-\nopagenumbers{}
+%\nopagenumbers{}
 \firstname{Vinay }
 \familyname{S Rao}
 \mobile{+91-8105607537}
 \phone{080-26394412}
-\address{63, 22 Main, 12 A Cross, Padmanabhanagar}{Bangalore 560070}
+\address{\#63, 22 Main, 12 A Cross, Padmanabhanagar}{Bangalore 560070}
 \email{sr.vinay@gmail.com}
 \extrainfo{twitter: @vinaysrao, github:\httplink{https://github.com/vinaysrao}}
+\setcounter{page}{1}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\cfoot{Type 1 Page \thepage}
+\renewcommand{\familydefault}{\sfdefault}
 
 \begin{document}
 \maketitle
 \section{Education}
-\cventry{2009-(expected)2013}{Bachelor of Engineering, Information Science and Engineering}\newline{Visvesvarayya Technological University}{B.M.S College of Engineering, Bangalore}{GPA:\textit{8.60/10.0}}
+\cventry{2009-2013}{Bachelor of Engineering, Information Science and Engineering}\newline{Visvesvarayya Technological University}{B.M.S College of Engineering, Bangalore}{GPA:\textit{8.77/10.0}}
 
-\cventry{2007-2009}{Pre University College}{Kumaran PU College, Bangalore}{First class with distinction (95\%)}{}{}
+\cventry{2007-2009}{Pre University College}{Kumaran PU College, Bangalore}{95\%}{}{}
 
-\section{Skills}
-\cvlistitem{\small Ability to work with people across countries and cultures.}
-\cvlistitem{\small Problem solving.}
-\cvlistitem{\small Knowledge of source control management systems like git.}
-
+\cventry{1997-2007}{Primary and Secondary School}{Kumaran School, Bangalore}{84\%}{}{}
 
 \section{Technical Skills}
 \cvcomputer{Languages}{C,C++,Python,Java,JavaScript,Php,C\#}{}{}
-\cvcomputer{Frameworks}{Django,Qt,numpy,scipy,scikitlearn,nltk}{}{}
+\cvcomputer{Frameworks}{OpenCV,OpenML,Django,Qt,numpy,scipy,scikitlearn,nltk}{}{}
 \cvcomputer{Others}{bash,awk,bf,perl,html,css,ajax}{}{}
 \cvcomputer{}{\httplink{https://github.com/vinaysrao}}{}{}
 
+\section{Experience}
+\cvline{August, 2013-current}{\textbf{Software Development Engineer}, Amazon Development Centre, Bangalore, India.}
+\cvline{}{\small I'm part of the team that brings the retail website experience from Amazon to India. I work on developing platforms to enable content generation for retail and wholesale businesses.}
+
+\cvline{January - September, 2013}{\textbf{Product Engineer, Intern}, AIndra Systems, Bangalore, India}
+\cvline{}{\small I worked as a researcher and programmer, working on projects involving face detection, face recognition and microscopic cell classification. I implemented a face tracker that tracks multiple faces at once. Researched and implemented features and methods for face detection and recognition. Worked on detection of cells, and recognition of carcinoma.} 
+
+\cvline{April - August, 2012}{\textbf{Contract Developer}, Google, Mountain View, CA}
+\cvline{}{\small Google Summer of Code; worked on Gluon, KDE}
+
+\cvline{April - August, 2011}{\textbf{Contract Developer}, KDE}
+\cvline{}{\small Season of KDE; worked on Python UI Compiler}
+
+
 \section{Projects}
-\cvline{Academic}{\textbf{Centralized News Feed}}
-\cvline{}{\small A simple to use news feed system that can be setup in no time. Includes 
+\cvline{1}{\textbf{Bachelor's thesis : Object Recognition in Videos}}
+\cvline{Description}{\small Initially, we worked on and built a system that fit curves to outlines of objects, which was divided into a set number of segments or tiles. The co-efficients derived from fitting curves were used together as features. This worked for simple shapes and objects. With further research, we built a system that uses SURF (Speeded up Robust Features) descriptors extracted from interest points. These features are first indexed using unsupervised clustering (k-means), and then a classifier (LinearSVM) is trained for the 'bag of words' derived from using those indices[1]. Our main contribution to this was to speed up the process of training by pre-processing the descriptors. Application of PCA (Principal Component Analysis) or other dimensionality reduction techniques on the descriptors allows us to analyse the frequency of the vectors within a class. The descriptors are then assigned weights and are then selectively sent for k-means, thus reducing the number of vectors that need to be clustered. We were able to achieve an average accuracy of \textit{68\%} on Caltech's 101 objects database. ( Uses C++, Python, OpenCV )}
+\cvline{2}{\textbf{Internship : Aindra Systems}}
+\cvline{Description}{\small \begin{itemize} \item I devised and implemented a \textbf{face tracking} system that was able to track multiple faces at once. Using the Lucas Kannade Optical Flow method, new faces that are detected in the scene are tracked as long as they are visible, within a certain degree of transformation. Good key-points are extracted from the initial frame of reference, and are then tracked. However these key-points are updated in each frame to fit the new frame of reference, all the while being compared to the original face so tracking is stopped if the points are distorted. \item We worked on several state of the art features for \textbf{face detection} including SURF cascades[2], Normalized Pixel Difference[3] that improved the accuracy of cascade based detectors. For \textbf{recognition}, we worked on methods to decrease false positives by improving on sparse encoder techniques. \item \textbf{Medical image analysis}: Deriving on the works of Dr. Plissiti[4], we worked on methods to detect carcinoma in images of pap-smears. I worked on a method to use automated moving k-means to segment the cytoplasm in the image. \item I built a fully functional \textbf{website} that is used to maintain attendance systems that rely on computer vision for results, including functions such as report generation, manual tagging of unmarked attendances etc. \end{itemize}}
+
+\cvline{3}{\textbf{Google Summer of Code 2012 : Save/load system for Gluon, KDE}}
+\cvline{Description}{\small I worked on Gluon, a \textbf{game development engine}, that's part of KDE. I implemented a system to load and save game states, including a method to serialize Javascript objects. The system was built using a tree of game objects, to which I added a tagging system to make it easier for further traversals. For incremental saves, a difference between trees was saved to enable smaller save file sizes.}
+
+\cvline{4}{\textbf{Season of KDE 2011 : UI Config Compiler}}
+\cvline{Description}{\small There is a project called \textbf{PyQt} that is widely used under KDE. For this, I worked on a compiler that converts XML configuration files to Python code. It takes configurations generated from a UI designer and generates the equivalent code in Python to achieve the same results, deriving the same logic from C++ and Ruby variants.}
+\newpage{}
+\cvline{5}{\textbf{Academic project for web programming : Centralized News Feed}}
+\cvline{Description}{\small A simple to use news feed system that can be setup in no time. Includes 
 a live news ticker, tag clouds, search( separate from content ), comments. ( Written in Php, ECMA + AJAX, mySQL )}
 
-\cvline{Season of KDE 2011}{\textbf{UI Config Compiler}}
-\cvline{}{\small A compiler that converts configuration files written in simple XML, to equivalent
-Python script files. Specifically written for PyQt-UI configuration files size. ( Written in C++ )}
-
-\cvline{Google Summer of Code 2012}{\textbf{Save/load system for Gluon}}
-\cvline{}{\small Gluon is a game creation and playing engine, written in Qt. I implemented a system to
-save and load game states, using scene graphs. Also substantially reduced saved game files' size. ( Coded in C++ )}
-
-\newpage{}
-
-\cvline{Other}{Automated coding judge}
-\cvline{}{\small Written in Django, this is a way to easily hold coding competitions, where
+\cvline{6}{\textbf{Other : Automated coding judge}}
+\cvline{Description}{\small Written in Django, this is a way to easily hold coding competitions, where
 users are given unique inputs, and are ranked based on difficulty and speed. ( Python + Django )}
 
-\cvline{Other}{Generic A* search}
-\cvline{}{\small A generic implementation of A* search for in-game AI, calculated using any chosen heuristics ( Python )}
+%\newpage{}
 
 \makefooter
 
 \section{Co-curricular activities}
-\cvlistitem{\small Open source contributor and developer for KDE}
-\cvlistitem{\small Organized Software Freedom Day - 2011 and 2012 at BMSCE}
-\cvlistitem{\small Conducted technical workshops and have been instrumental in organizing events for BMSLUG}
+\cvline{Open Source}{Have contributed to various Open Source Projects like KDE, OpenCV, etc}
+\cvline{Workshops and sessions}{\begin{itemize} \item Organized Software Freedom Day for 2 years at BMSCE. \item Conducted weekly sessions, and given talks about Open Source tools and platforms like Python, KDE, SciPy, NLTK, Django.\end{itemize}}
+\cvline{Student Groups}{Have been part of various discussions and activities of BMSLUG}
+\cvline{Events}{\begin{itemize}\item Have organized events for BMSLUG in college. \item As part of the organizational committee for the departmental fest, I have organized events like coding competitions\end{itemize}} 
+
+%\newpage{}
 
 \section{Extra-curricular activities}
-\cvlistitem{\small Completed senior grade in instrumental Carnatic music (Flute) and performed at many
-prestigious events and stages.}
-\cvlistitem{\small Coordinator of the music team at BMSCE - won laurels on various occasions}
-\cvlistitem{\small Cartooning, swimming, basketball}
-
+\cvline{Music}{\begin{itemize}\item Have been learning Indian Classical Music(Flute) from the last 12 years, and have completed the Seniors grade certification. Have performed at various events and venues. \item As the coordinator of the music team at college, I've participated in many events successfully, including winning the state-wide VTU group music and instrumental events.\end{itemize}}
+\cvline{Sports}{Cycling, running, basketball}
+\cvline{Interests}{Reading, cartooning}
 \section{Additional information}
-\cvline{Date of birth}{15-05-1991}
+\cvline{Date of birth}{15-May-1991}
 
+\newpage{}
+\section{Citations}
+\cvline{}{\small \begin{enumerate} \item Object Classification and Localizaion using SURF descriptors; Drew Schmitt, Nicholas McCoy - Dec 13, 2011                   
+\item Felzenszwalb, Ramanan et all - Object Detection with Discriminatively Trained Part-Based Models, IEEE Trans, Pattern Analysis and Machine     Intelligence
+\item Shengcai Liao, Anil K. Jain et all - Unconstrained Face Detection
+\item Cervical Cell Classification based only on Nucleus features - Marina E Plissiti and Christophoros Nikou, University of Ioannina, Greece
+\end{enumerate}}
 \end{document}
