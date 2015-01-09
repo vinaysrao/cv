@@ -1,0 +1,234 @@
+\documentclass[10pt,letterpaper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{black}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+
+% adjust the page margins
+\usepackage[margin=1cm,scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+\AtBeginDocument{
+    \hypersetup{colorlinks,urlcolor=blue}
+}
+\renewcommand*{\namefont}{\fontsize{18}{20}\mdseries\upshape}
+\usepackage{import}
+
+% personal data
+\name{\textbf{Vinay}}{\textbf{Rao}}
+\address{1186 W 36th Street, Apt 1F, Los Angeles, CA 90007}{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+1-213-400-0458}                   % optional, remove / comment the line if not wanted
+%\phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{sr.vinay@gmail.com}                               % optional, remove / comment the line if not wanted
+%\homepage{{http://www.wikibooks.org}{Wikibooks home}}                         % optional, remove / comment the line if not wanted
+\extrainfo{\href{https://www.linkedin.com/profile/view?id=122597494}{LinkedIn}, \href{https://github.com/vinaysrao}{Github} }                % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%-----       resume       ---------------------------------------------------------
+\pagestyle{empty}
+\makecvtitle
+
+\small{Graduate student of Computer Science specializing in machine learning and computer vision, seeking active research and development roles in fast paced teams. Proven track record of delivering creative and end-to-end engineering solutions.}
+
+\section{Professional Experience}
+
+\vspace{2pt}
+
+\subsection{Aindra Systems, Bangalore, India \small{Jan 2013-Jul 2013, Aug 2014-Present}}
+\textit{Research \& Development Engineer, Intern/Consultant}
+
+\begin{small}
+
+\begin{itemize}
+
+\item \textbf{Automated attendance system with face recognition and tracking}
+\begin{itemize}
+\item Led the design and development of an end-to-end cloud based system for attendance automated through computer vision.
+\item Designed a scalable architecture for the product that is now used in several places in India.
+\item Conducted research, implemented and developed several algorithms including deep networks (LeNet) for face recognition and detection.
+\item Single-handedly developed the web-interface for users to interact with the attendance system; it uses their feedback to continuously improve accuracy of the model.
+\item Prototyped a face tracking and clustering system using Kalman filters and Gaussian Mixture Models to enable smaller uploads to the server and for industrial use.
+\end{itemize}
+
+\item \textbf{Biometric face verification system}
+\begin{itemize}
+\item Leading the on-going development and research of a face verification system for use in industry.
+\item Designed and setup the entire architecture required for the product including servers and API design.
+\item Conducted training and testing of several state of the art machine learning models such as LeNet (using the deep learning framework, Caffe), Siamese network models etc.
+\item Developed ways to increase speed and accuracy of verification by combining several techniques such as ensemble methods with random forests, weighted polling and one-class distributions.
+\end{itemize}
+
+\item \textbf{Automated detection of cancerous cells through imaging}
+\begin{itemize}
+\item Built a prototype to detect cancerous cells through image processing.
+\item Conducted surveys and talked to field experts to understand and use relevant hand-crafted features for statistical models used in the classifiers.
+\item Implemented several image processing algorithms for object localization and pre-processing like blob detection, h-minima etc.
+\item Successfully showcased the prototype at Indian Institute of Science, India.
+\end{itemize}
+
+\end{itemize}
+\end{small}
+
+
+\subsection{Amazon, Bangalore, India \small{Aug 2013-Jul 2014}}
+\textit{Software Development Engineer, Platform Development}
+\begin{small}
+\begin{itemize}
+
+\item \textbf{Large scale real-time product and vendor reporting tool}
+\begin{itemize}
+\item Led a small team in the design and development of a large-scale dynamic reporting tool.
+\item Built a system that aggregates data from several different sources on request, and prepares an accessible document for vendor managers.
+\item Successful in planning and executing a system that could scale to fetching reports that required billions of requests.
+\item Initiated and furthered development to include a web-interface and cloud storage to enable easier access.
+\item Reports generated enabled vendor managers to save over 70\% of their time to find the same information through workarounds.
+\end{itemize}
+
+\item \textbf{Easily configurable floating ad banner system for mobile websites}
+\begin{itemize}
+\item Designed a customizable banner system that is used for displaying floating advertisements on mobile devices.
+\item Carried the feature further than initially requested to enable on-the-fly changes by product managers.
+\item Project received accolades for creativity and was recognized department-wide for quick deployment.
+\item Multiple teams world-wide used this feature and noticed increase in traffic to their channels.
+\end{itemize}
+
+\item \textbf{Other features for the retail website}
+\begin{itemize}
+\item Single-handedly developed and deployed a secure sign-in page for mobile devices.
+\item Added several visual and messaging enhancements to product detail pages for PC and Mobile.
+\item Designed a system to include new filters for search pages in India, including creating data-stores and aggregating information from multiple sources.
+\item Worked with multiple teams across various locations.
+\item Was appointed as team-lead for mobile website development in India.
+\end{itemize}
+
+\end{itemize}
+\end{small}
+
+\section{Academia}
+
+\vspace{5pt}
+
+\begin{itemize}
+
+\item{\cventry{Fall 2014--2016 (tentative)}{M S Computer Science (Ongoing)}{University of Southern California}{Los Angeles}{\textit{1st semester GPA:3.6/4.0}}{Courses: Advanced Algorithms, Artificial Intelligence, Convex and Combinatorial Optimization}}
+
+\item{\cventry{2009--2013}{B S Computer Science}{Visvesvarayya Technological University}{Bangalore}{\textit{GPA: 8.78/10.0}}{Courses: Pattern Recognition, Probability \& Statistics, Advanced data structures and algorithms, Networks, OS, Compilers}}  % arguments 3 to 6 can be left empty
+
+\end{itemize}
+\vspace{2pt}
+
+\subsection{External Courses}
+\textbf{Coursera:}
+\begin{itemize}
+\item Machine Learning by Andrew Ng: Regression, Neural networks, designing machine learning systems
+\item Neural Networks by Geoffrey Hinton: Recursive neural networks, Bayesian learning, Hopfield networks, Autoencoders, Pretraining
+\item Statistical Inference by Brian Caffo: statistical modelling, data oriented strategies, explicit uses of designs and randomizations in analyses.
+\end{itemize}
+
+\vspace{4pt}
+
+\subsection{Notable Projects}
+
+\vspace{5pt}
+
+\begin{itemize}
+
+\item{\textbf{Convex and Combinatorial Optimization (Master's project):} \textit{'On the optimization techniques in high-dimensional
+clustering, dimensionality reduction and visualization'}
+Instructor: Shaddin Dughmi
+\vspace{1pt}
+
+\small{
+\begin{itemize}
+\item Surveyed state of the art algorithms for unsupervised learning such as Stochastic Neighbor Embedding and Spectral Clustering and compared their results in the domains of clustering and visualization.
+\item Unified their results as a random Markov walk, and presented their optimization techniques.
+\item Pointed out research that has spawned from these general ideas and also proposed improvements to algorithms and optimization techniques used in the papers.
+\end{itemize}}}
+
+\item{\textbf{Pattern Recognition (Bachelor's Thesis):}\textit{'A holistic view on object recognition'}
+\vspace{1pt}
+\small{
+\begin{itemize}
+\item Led a team of 4 to conduct a comprehensive survey and study of historic to state of the art algorithms and features for generic object recognition.
+\item Implemented several algorithms including multinomial regression, Linear SVMs, and some feature extractors.
+\item Presented comparitive results of recognition with hand-crafted (SURF/SIFT) features vs convolutional networks with deep learning (automated feature extraction).
+\item Applied some of the faster algorithms to perform real-time object recognition and localization in videos.
+\item Was recognized as one of the best projects in the department. The whole team was invited back after graduation to talk about this project.
+\end{itemize}
+}
+}
+
+\end{itemize}
+
+\section{Relevant activities and achievements}
+\begin{itemize}
+\item \textbf{Google Summer of Code 2012:}
+\small{
+\textit{Contract Developer under Google for Gluon, KDE: Generic persistence system for a game engine}
+\begin{itemize}
+\item Developed a system that completely eliminates the need for game creators to worry about game state persistence.
+\item Game states are saved as Gnu Data Language (GDL) files by passing states/objects between Javascript and C++ layers.
+\item Took initiative to develop a scene-graph system with tags that quickens development. 
+\item Successfully completed work on incremental save/loads that reduced file sizes up to 80\%.
+\end{itemize}
+}
+\item \textbf{Other Projects}
+\begin{small}
+\begin{itemize}
+\item \textit{Summer of KDE 2011}: Designed a simple compiler in Python that converts UI configurations (XML) to Python code.
+\item Implemented several machine learning algorithms and used them successfully for problems on Hackerrank and Topcoder
+\item Designed and trained several systems for face recognition, object detection, etc using architectures such as LeNet.
+\end{itemize}
+\end{small}
+\item \textbf{Activities \& Achievements}
+\begin{small}
+\begin{itemize}
+\item Avid member of open source communities such as opencv, KDE, scipy etc
+\item Organized Software Freedom Day and technical seminars during undergraduate studies. 
+\item Actively part of various activities of BMS-Libre Users Group.
+\item Won several inter-collegiate coding competitions and participated in hackathons that resulted in internship offers.
+\end{itemize}
+\end{small}
+\end{itemize}
+
+\section{Technical skills}
+
+\vspace{2pt}
+
+\begin{itemize}
+
+\item \textbf{Programming Languages:} \emph{Proficient in}: C, C++, Python, Java, Matlab/Octave \\ \emph{Extensively used}: JSP, HTML, CSS, Javascript+AJAX, Perl, Php, C\#, MySQL, Haskell, Prolog, TeX
+
+\item \textbf{Frameworks:} Qt, MS Visual, Django, Apache
+
+\item \textbf{Scientific Libraries:} OpenCV, OpenML, numpy, scipy, nltk, sklearn, Caffe, boost, liblinear, matplotlib
+
+\item \textbf{OS \& IDEs:} Linux [KDevelop, QtCreator, Eclipse, IntelliJ, Netbeans, Emacs, vim], Windows [Visual Studio], Mac
+
+\item \textbf{Tools:} git, SVN, MS Office
+
+\end{itemize}
+
+
+\end{document}
+
